@@ -100,7 +100,6 @@ extra_javascript:
 
 ```
 extra_javascript:
-    - 'js/extra.js'
     - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 ```
 
