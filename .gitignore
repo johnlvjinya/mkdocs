@@ -5,3 +5,6 @@ __pycache__/
 test.xlsx
 **/test_output/
 myutils/test/
+mkdocs/docs/
+temp/
+00_upload/

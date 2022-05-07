@@ -1,8 +1,10 @@
 
 import os
 
-if os.path.exists('00_upload') is False:
-    os.mkdir('00_upload')
+file_list = '00_upload,temp'.split(',')
+for f in file_list:
+    if os.path.exists(f) is False:
+        os.mkdir(f)
 
 
 ###### seatable表格token
