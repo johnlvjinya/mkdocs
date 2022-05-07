@@ -66,6 +66,7 @@ def delete_bucket_file(file_name):                  # bucket_list 需要分析�
 #         Key=file_name,
 #     )
 #     response['Body'].get_stream_to_file(file_name)
+    
 
 def upload_bucket_file(local_f_path, cos_f_path):
     with open(local_f_path, 'rb') as fp:

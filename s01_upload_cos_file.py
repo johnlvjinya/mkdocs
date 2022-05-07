@@ -34,7 +34,6 @@ def upload_from_file(src_file='00_upload'):
             else:
                 print('存在,不用插入')
 
-
         else:
             shutil.rmtree(f_path)
 
