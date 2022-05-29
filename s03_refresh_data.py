@@ -31,7 +31,10 @@ def refresh_seatable_md():  # 新建cos文档的md文件
             if r['名称']==last_t: # 不用增加标题
                 pass  
             else:       # 增加标题
-                tree_i_list = r['名称'].split('-')
+                try:
+                    tree_i_list = str(r['名称']).split('-')
+                except:
+                    print(r['名称'])
 
                 for index_j,t_j in enumerate(tree_i_list):
                     if t_j not in appear_list:
@@ -44,7 +47,7 @@ def refresh_seatable_md():  # 新建cos文档的md文件
             last_t = r['名称']
 
             ############ 保存md文件
-            save_path = os.path.join('mkdocs\\docs', r['名称'].split('-')[0])
+            save_path = os.path.join('mkdocs\\docs', str(r['名称']).split('-')[0])
 
             file_type = r['name'].split('.')[-1]
             if file_type=='md':
@@ -67,13 +70,6 @@ def refresh_seatable_md():  # 新建cos文档的md文件
                             os.makedirs(save_path)
 
                         get_file_by_url(f_url=st_f['url'], save_path = file_path)
-
-
-            
-
-
-
-
 
     df.to_excel('temp/last_files.xlsx', index=False)
 
